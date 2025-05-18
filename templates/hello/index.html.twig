@@ -1,1 +1,7 @@
-<h1>Bomba cladd</h1>
+<ul>
+    {% for item in helloWorld %}
+        <li>{{ item.title }} - {{ item.id }}</li>
+    {% else %}
+        <li>Geen items gevonden.</li>
+    {% endfor %}
+</ul>
