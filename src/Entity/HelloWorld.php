@@ -14,7 +14,7 @@ class HelloWorld
     private ?int $id = null;
 
     #[ORM\Column(length: 255)]
-    private ?string $omer = null;
+    private ?string $title = null;
 
     public function getId(): ?int
     {
@@ -23,12 +23,12 @@ class HelloWorld
 
     public function getTitle(): ?string
     {
-        return $this->omer;
+        return $this->title;
     }
 
     public function setTitle(string $title): static
     {
-        $this->omer = $title;
+        $this->title = $title;
 
         return $this;
     }
