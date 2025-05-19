@@ -16,6 +16,12 @@ class HelloWorld
     #[ORM\Column(length: 255)]
     private ?string $title = null;
 
+    #[ORM\Column(length: 255)]
+    private ?string $life = null;
+
+    #[ORM\Column(length: 255)]
+    private ?string $maxserv = null;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -29,6 +35,30 @@ class HelloWorld
     public function setTitle(string $title): static
     {
         $this->title = $title;
+
+        return $this;
+    }
+
+    public function getLife(): ?string
+    {
+        return $this->life;
+    }
+
+    public function setLife(string $life): static
+    {
+        $this->life = $life;
+
+        return $this;
+    }
+
+    public function getWork(): ?string
+    {
+        return $this->maxserv;
+    }
+
+    public function setWork(string $work): static
+    {
+        $this->maxserv = $work;
 
         return $this;
     }
